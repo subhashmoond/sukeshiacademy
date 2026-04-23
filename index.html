@@ -202,7 +202,7 @@
             color: #cbd5f5;
         }
 
-        /* FAQ */
+        /* FAQ
         .faq-section {
             padding: 60px 20px;
             background: #020617;
@@ -245,7 +245,7 @@
         .faq-item.active .faq-answer {
             max-height: 200px;
             padding: 15px;
-        }
+        } */
 
         /* FOOTER */
         .footer {
@@ -320,6 +320,192 @@
             transform: translateY(-3px) scale(1.02);
             box-shadow: 0 12px 28px #facc15;
         }
+
+
+        /* LEAD SECTION */
+        .lead-wrapper {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDE */
+        .lead-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .lead-content h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .lead-content p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .lead-points {
+            list-style: none;
+        }
+
+        .lead-points li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* RIGHT SIDE */
+        .lead-form {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* FLOATING INPUT */
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            pointer-events: none;
+            transition: 0.3s;
+            background: #020617;
+            padding: 0 5px;
+        }
+
+        /* FLOAT EFFECT */
+        .input-group input:focus+label,
+        .input-group input:valid+label,
+        .input-group select:focus+label,
+        .input-group select:valid+label {
+            top: -8px;
+            font-size: 12px;
+            color: #facc15;
+        }
+
+        /* MOBILE FIX */
+        @media(max-width:768px) {
+            .lead-wrapper {
+                flex-direction: column;
+                padding: 25px;
+            }
+        }
+
+
+
+
+        /* FAQ css  */
+        .faq-section {
+            padding: 80px 20px;
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            text-align: center;
+        }
+
+        .faq-heading {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .faq-sub {
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        /* CONTAINER */
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* ITEM */
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+        }
+
+        /* ACTIVE GLOW */
+        .faq-item.active {
+            border: 1px solid #facc15;
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
+        }
+
+        /* QUESTION */
+        .faq-question {
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-question i {
+            transition: 0.3s;
+        }
+
+        /* ROTATE ICON */
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        /* ANSWER */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            color: #cbd5f5;
+            line-height: 1.6;
+            transition: all 0.4s ease;
+        }
+
+        /* OPEN STATE */
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 15px 20px 20px;
+        }
+
+
+
+        .simple-footer {
+            text-align: center;
+            padding: 30px 15px 90px 15px;
+            /* background: #020617; */
+            background: linear-gradient(135deg, #020617, #0f172a);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .simple-footer p {
+            margin: 5px 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .simple-footer .tagline {
+            font-size: 13px;
+            color: #64748b;
+        }
     </style>
 </head>
 
@@ -327,22 +513,23 @@
 
     <!-- HERO -->
     <div class="hero container">
-        <div class="badge">🎯 90-Min FREE Session</div>
+        <div class="badge">Pre-Primary Teacher या Librarian Grade 3 में Career बनाना चाहते हैं?</div>
 
         <h1>
-            Complete <span class="highlight">IGNOU CLIS</span><br>
-            Without Confusion 🚀
+            IGNOU<span class="highlight">CLIS & DECE Program</span><br>
+            के साथ अपने future को दें सही दिशा — बिना किसी confusion के
         </h1>
 
         <p class="sub">
-            No Admission Stress • No Assignment Confusion • No Panic
+            Admission से लेकर Exam तक — Complete Guidance एक ही जगह
         </p>
 
         <div class="flex">
             <div class="video glass">
 
-                <iframe width="100%" height="415" src="https://www.youtube.com/embed/gDZZwwBUs8g?si=qtB58j03a_kiwrNV"
-                    title="YouTube video player" frameborder="0"
+                <iframe style="width:100%;height:500px;"
+                    src="https://www.youtube.com/embed/gDZZwwBUs8g?si=qtB58j03a_kiwrNV" title="YouTube video player"
+                    frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -354,7 +541,7 @@
         </div>
 
         <div class="flex" style="justify-content: center; align-items: center; margin-top: 20px !important;">
-            <button class="cta-btn">CLAIM YOUR FREE SEAT NOW<br>
+            <button class="cta-btn">WhatsApp पर बात करें <br>
                 <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span>
             </button>
             <!-- <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span> -->
@@ -364,7 +551,7 @@
 
     <!-- SUCCESS -->
     <div class="section container">
-        <h2 class="hero-heading">Real Stories • Real Transformations</h2>
+        <h2 class="hero-heading">Students का भरोसा, हमारी पहचान</h2>
 
         <div class="grid">
             <div class="glass">
@@ -402,8 +589,8 @@
 
     <!-- COURSES -->
     <div class="section container">
-        <h2 class="hero-heading">Start Your Success Journey</h2>
-        <p class="hero-sub">Join thousands of students</p>
+        <h2 class="hero-heading">हमारे Popular Courses</h2>
+        <p class="hero-sub">ऐसे courses जो आपके career को मजबूत बनाते हैं — expert guidance के साथ</p>
 
         <div class="grid">
             <div class="course-card">
@@ -453,41 +640,128 @@
     </div>
 
     <!-- COUNTDOWN -->
-    <div class="section">
+    <!-- <div class="section">
         <div class="countdown-box">
             <div class="time"><span id="hours">07</span><small>hours</small></div>
             <div class="time"><span id="minutes">25</span><small>minutes</small></div>
             <div class="time"><span id="seconds">17</span><small>seconds</small></div>
         </div>
+    </div> -->
+
+
+    <!-- Enquery form design -->
+    <!-- PREMIUM FORM SECTION -->
+    <div class="section container">
+
+        <div class="lead-wrapper glass">
+
+            <!-- LEFT CONTENT -->
+            <div class="lead-content">
+                <h2>अब देर मत कीजिए — <span class="highlight">अपने career की शुरुआत आज ही करें</span> 🚀</h2>
+                <p>
+                    Admission लेना हो या Assignment में help चाहिए — हमारी team हर step पर आपके साथ है।
+                </p>
+
+                <ul class="lead-points">
+                    <li>✅ Live + Recorded Classes</li>
+                    <li>✅ Assignment Guidance</li>
+                    <li>✅ परीक्षा Strategy + PYQs</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="lead-form">
+                <form>
+
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Full Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" required>
+                        <label>Mobile Number</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label>Email Address</label>
+                    </div>
+
+                    <div class="input-group">
+                        <select required>
+                            <option value=""></option>
+                            <option>IGNOU CLIS</option>
+                            <option>DECE</option>
+                            <option>MCQ Batch</option>
+                        </select>
+                        <label>Select Course</label>
+                    </div>
+
+                    <button class="cta-btn">
+                        Book Seat Now 🔥
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- FAQ -->
     <section class="faq-section">
-        <h2 class="faq-heading">FAQ</h2>
+        <h2 class="faq-heading">Frequently Asked Questions ❓</h2>
+        <p class="faq-sub">Clear your doubts before you join</p>
 
         <div class="faq-container">
 
             <div class="faq-item active">
-                <div class="faq-question">What is this course? <span>+</span></div>
-                <div class="faq-answer">Complete guidance for IGNOU CLIS.</div>
+                <div class="faq-question">
+                    <span>क्या आप IGNOU में admission करवाते हैं?</span>
+                    <i>+</i>
+                </div>
+                <div class="faq-answer">
+                    हाँ, हम complete admission support देते हैं।
+                </div>
             </div>
 
             <div class="faq-item">
-                <div class="faq-question">Do I need experience? <span>+</span></div>
-                <div class="faq-answer">No, beginner friendly.</div>
+                <div class="faq-question">
+                    <span>Assignment में help मिलती है?</span>
+                    <i>+</i>
+                </div>
+                <div class="faq-answer">
+                    हाँ, हम assignment बनाने और submit करने में पूरी सहायता करते हैं।
+                </div>
             </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>क्या study material मिलता है?</span>
+                    <i>+</i>
+                </div>
+                <div class="faq-answer">
+                    हाँ, आपको proper study guidance और material provide किया जाता है।
+                </div>
+            </div>
+
 
         </div>
     </section>
 
     <!-- FOOTER -->
-    <div class="footer">© Sukeshi Academy</div>
+    <!-- SIMPLE FOOTER -->
+    <footer class="simple-footer">
+        <p>© 2026 Sukeshi Academy</p>
+        <p class="tagline">Helping IGNOU students succeed without confusion 🚀</p>
+    </footer>
 
     <!-- CTA -->
     <div class="cta-bar">
-        <div>⏳ Limited Time</div>
-        <div class="timer"><span id="min">10</span>:<span id="sec">00</span></div>
-        <a href="#" class="btn">Enroll</a>
+        <!-- <div>⏳ Limited Time</div>
+        <div class="timer"><span id="min">10</span>:<span id="sec">00</span></div> -->
+        <a href="#" class="btn">Enroll Now 999/-</a>
     </div>
 
     <script>
@@ -511,7 +785,15 @@
     <script>
         document.querySelectorAll(".faq-question").forEach(q => {
             q.addEventListener("click", () => {
-                q.parentElement.classList.toggle("active");
+                const item = q.parentElement;
+
+                // close all
+                document.querySelectorAll(".faq-item").forEach(i => {
+                    if (i !== item) i.classList.remove("active");
+                });
+
+                // toggle current
+                item.classList.toggle("active");
             });
         });
     </script>
