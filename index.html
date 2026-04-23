@@ -284,6 +284,42 @@
                 font-size: 26px;
             }
         }
+
+
+        .cta-btn {
+            background: linear-gradient(90deg, #f97316, #facc15);
+            color: #000;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            font-weight: 800;
+            /* font-family: var(--font-head); */
+            cursor: pointer;
+            /* z-index: 1; */
+            border: none;
+            border-radius: 8px;
+            padding: 20px 30px;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+            display: block;
+            position: relative;
+            box-shadow: 0 8px 20px #facc1580;
+        }
+
+        .cta-btn:after {
+            content: "";
+            border-radius: inherit;
+            z-index: -1;
+            animation: 2s infinite pulse-glow-pseudo;
+            position: absolute;
+            inset: 0;
+        }
+
+        .cta-btn:hover {
+            color: #fff;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 28px #facc15;
+        }
     </style>
 </head>
 
@@ -312,6 +348,18 @@
 
             </div>
         </div>
+
+        <div class="flex" style="justify-content: center; align-items: center;">
+            <h2>Total Value: ₹999</h2>
+        </div>
+
+        <div class="flex" style="justify-content: center; align-items: center; margin-top: 20px !important;">
+            <button class="cta-btn">CLAIM YOUR FREE SEAT NOW<br>
+                <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span>
+            </button>
+            <!-- <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span> -->
+        </div>
+
     </div>
 
     <!-- SUCCESS -->
@@ -320,18 +368,34 @@
 
         <div class="grid">
             <div class="glass">
-                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/embed/_zMbWXRpJmY?si=gSpPjxBfrcSvmLfe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/_zMbWXRpJmY?si=gSpPjxBfrcSvmLfe" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="glass">
-                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/embed/sNATHrbhGxo?si=mtAtGWww86bIKUY6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/sNATHrbhGxo?si=mtAtGWww86bIKUY6" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
             <div class="glass">
-                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/embed/eY36SDaFcqo?si=aq6kQcXF28ea2Orq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/eY36SDaFcqo?si=aq6kQcXF28ea2Orq" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
             <div class="glass">
-                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/embed/dGdnmTJ2FGs?si=b_-MQhmIRqjISKzn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/dGdnmTJ2FGs?si=b_-MQhmIRqjISKzn" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -343,7 +407,8 @@
 
         <div class="grid">
             <div class="course-card">
-                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-15_15-25-40/dece%20(2).png" class="course-img">
+                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-15_15-25-40/dece%20(2).png"
+                    class="course-img">
                 <div class="course-content">
                     <h3>IGNOU DECE Course</h3>
                     <p>Live classes + notes + test series</p>
@@ -356,7 +421,8 @@
             </div>
 
             <div class="course-card">
-                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-15_15-28-38/clis.png" class="course-img">
+                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-15_15-28-38/clis.png"
+                    class="course-img">
                 <div class="course-content">
                     <h3>CLIS</h3>
                     <p>Crash course + PYQs</p>
@@ -369,7 +435,8 @@
             </div>
 
             <div class="course-card">
-                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-11_17-24-51/mcq.png" class="course-img">
+                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-11_17-24-51/mcq.png"
+                    class="course-img">
                 <div class="course-content">
                     <h3>CLIS (MCQ BATCH)</h3>
                     <p>Crash course + PYQs</p>
