@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukeshi Academy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #020617;
+            color: #fff;
+        }
+
+        /* CONTAINER */
+        .container {
+            margin: auto;
+        }
+
+        /* GLASS */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 60px 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: #facc15;
+        }
+
+        .sub {
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
+        /* FLEX */
+        .flex {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .video {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 60px 100px;
+            background: #020617;
+        }
+
+        .hero-heading {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-sub {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* COURSE CARD */
+        .course-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .course-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 20px;
+            color: #fff;
+        }
+
+        .course-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            font-size: 14px;
+            color: #cbd5f5;
+            margin-bottom: 15px;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #f97316, #facc15);
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #ea580c, #eab308);
+        }
+
+        /* COUNTDOWN */
+        .countdown-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background: linear-gradient(135deg, #1e293b, #020617);
+            padding: 25px 40px;
+            border-radius: 15px;
+            width: fit-content;
+            margin: 20px auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .time span {
+            font-size: 40px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .time small {
+            font-size: 14px;
+            color: #cbd5f5;
+        }
+
+        /* FAQ */
+        .faq-section {
+            padding: 60px 20px;
+            background: #020617;
+            text-align: center;
+        }
+
+        .faq-heading {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            padding: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            color: #cbd5f5;
+            transition: 0.4s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 15px;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* CTA BAR */
+        .cta-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .timer span {
+            background: #fff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+
+            .hero,
+            .section {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero container">
+        <div class="badge">🎯 90-Min FREE Session</div>
+
+        <h1>
+            Complete <span class="highlight">IGNOU CLIS</span><br>
+            Without Confusion 🚀
+        </h1>
+
+        <p class="sub">
+            No Admission Stress • No Assignment Confusion • No Panic
+        </p>
+
+        <div class="flex">
+            <!-- <div class="video glass"> -->
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gDZZwwBUs8g?si=qtB58j03a_kiwrNV"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="section container">
+        <h2 class="hero-heading">Real Stories • Real Transformations</h2>
+
+        <div class="grid">
+            <div class="glass"><iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/2tdhoaVo5ZM"></iframe></div>
+            <div class="glass"><iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/2tdhoaVo5ZM"></iframe></div>
+            <div class="glass"><iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/2tdhoaVo5ZM"></iframe></div>
+        </div>
+    </div>
+
+    <!-- COURSES -->
+    <div class="section container">
+        <h2 class="hero-heading">Start Your Success Journey</h2>
+        <p class="hero-sub">Join thousands of students</p>
+
+        <div class="grid">
+            <div class="course-card">
+                <img src="https://via.placeholder.com/400x200" class="course-img">
+                <div class="course-content">
+                    <h3>IGNOU CLIS Course</h3>
+                    <p>Live classes + notes + test series</p>
+                    <div class="course-meta">
+                        <span class="price">₹2,999</span>
+                        <span class="old-price">₹5,999</span>
+                    </div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://via.placeholder.com/400x200" class="course-img">
+                <div class="course-content">
+                    <h3>UGC NET</h3>
+                    <p>Crash course + PYQs</p>
+                    <div class="course-meta">
+                        <span class="price">₹4,999</span>
+                        <span class="old-price">₹8,999</span>
+                    </div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://via.placeholder.com/400x200" class="course-img">
+                <div class="course-content">
+                    <h3>UGC NET</h3>
+                    <p>Crash course + PYQs</p>
+                    <div class="course-meta">
+                        <span class="price">₹4,999</span>
+                        <span class="old-price">₹8,999</span>
+                    </div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="section">
+        <div class="countdown-box">
+            <div class="time"><span id="hours">07</span><small>hours</small></div>
+            <div class="time"><span id="minutes">25</span><small>minutes</small></div>
+            <div class="time"><span id="seconds">17</span><small>seconds</small></div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2 class="faq-heading">FAQ</h2>
+
+        <div class="faq-container">
+
+            <div class="faq-item active">
+                <div class="faq-question">What is this course? <span>+</span></div>
+                <div class="faq-answer">Complete guidance for IGNOU CLIS.</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Do I need experience? <span>+</span></div>
+                <div class="faq-answer">No, beginner friendly.</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">© Sukeshi Academy</div>
+
+    <!-- CTA -->
+    <div class="cta-bar">
+        <div>⏳ Limited Time</div>
+        <div class="timer"><span id="min">10</span>:<span id="sec">00</span></div>
+        <a href="#" class="btn">Enroll</a>
+    </div>
+
+    <script>
+        let totalSeconds = 7 * 3600 + 25 * 60 + 17;
+
+        function updateTimer() {
+            let h = Math.floor(totalSeconds / 3600);
+            let m = Math.floor((totalSeconds % 3600) / 60);
+            let s = totalSeconds % 60;
+
+            document.getElementById("hours").innerText = h;
+            document.getElementById("minutes").innerText = m;
+            document.getElementById("seconds").innerText = s;
+
+            if (totalSeconds > 0) totalSeconds--;
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach(q => {
+            q.addEventListener("click", () => {
+                q.parentElement.classList.toggle("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
