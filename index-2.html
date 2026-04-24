@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukeshi Academy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #020617;
+            color: #fff;
+        }
+
+        /* CONTAINER */
+        .container {
+            margin: auto;
+        }
+
+        /* GLASS */
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 60px 100px;
+            text-align: center;
+            background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.4;
+        }
+
+        .highlight {
+            color: #facc15;
+        }
+
+        .sub {
+            color: #94a3b8;
+            margin-top: 10px;
+        }
+
+        /* FLEX */
+        .flex {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .video {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        /* SECTION */
+        .section {
+            padding: 60px 100px;
+            background: #020617;
+        }
+
+        .hero-heading {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero-sub {
+            text-align: center;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* COURSE CARD */
+        .course-card {
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .course-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .course-content {
+            padding: 20px;
+            color: #fff;
+        }
+
+        .course-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .course-content p {
+            font-size: 14px;
+            color: #cbd5f5;
+            margin-bottom: 15px;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #94a3b8;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #f97316, #facc15);
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #ea580c, #eab308);
+        }
+
+        /* COUNTDOWN */
+        .countdown-box {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background: linear-gradient(135deg, #1e293b, #020617);
+            padding: 25px 40px;
+            border-radius: 15px;
+            width: fit-content;
+            margin: 20px auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .time span {
+            font-size: 40px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .time small {
+            font-size: 14px;
+            color: #cbd5f5;
+        }
+
+        /* FAQ
+        .faq-section {
+            padding: 60px 20px;
+            background: #020617;
+            text-align: center;
+        }
+
+        .faq-heading {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .faq-container {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-question {
+            padding: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            color: #cbd5f5;
+            transition: 0.4s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 15px;
+        } */
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* CTA BAR */
+        .cta-bar {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .timer span {
+            background: #fff;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+
+            .hero,
+            .section {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+
+        .cta-btn {
+            background: linear-gradient(90deg, #f97316, #facc15);
+            color: #000;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.25rem;
+            font-weight: 800;
+            /* font-family: var(--font-head); */
+            cursor: pointer;
+            /* z-index: 1; */
+            border: none;
+            border-radius: 8px;
+            padding: 20px 30px;
+            text-decoration: none;
+            transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+            display: block;
+            position: relative;
+            box-shadow: 0 8px 20px #facc1580;
+        }
+
+        .cta-btn:after {
+            content: "";
+            border-radius: inherit;
+            z-index: -1;
+            animation: 2s infinite pulse-glow-pseudo;
+            position: absolute;
+            inset: 0;
+        }
+
+        .cta-btn:hover {
+            color: #fff;
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 28px #facc15;
+        }
+
+
+        /* LEAD SECTION */
+        .lead-wrapper {
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDE */
+        .lead-content {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .lead-content h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .lead-content p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .lead-points {
+            list-style: none;
+        }
+
+        .lead-points li {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        /* RIGHT SIDE */
+        .lead-form {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        /* FLOATING INPUT */
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 14px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            outline: none;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 14px;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            pointer-events: none;
+            transition: 0.3s;
+            background: #020617;
+            padding: 0 5px;
+        }
+
+        /* FLOAT EFFECT */
+        .input-group input:focus+label,
+        .input-group input:valid+label,
+        .input-group select:focus+label,
+        .input-group select:valid+label {
+            top: -8px;
+            font-size: 12px;
+            color: #facc15;
+        }
+
+        /* MOBILE FIX */
+        @media(max-width:768px) {
+            .lead-wrapper {
+                flex-direction: column;
+                padding: 25px;
+            }
+        }
+
+
+
+
+        /* FAQ css  */
+        .faq-section {
+            padding: 80px 20px;
+            background: radial-gradient(circle at top, #0f172a, #020617);
+            text-align: center;
+        }
+
+        .faq-heading {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .faq-sub {
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        /* CONTAINER */
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* ITEM */
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: 0.3s;
+        }
+
+        /* ACTIVE GLOW */
+        .faq-item.active {
+            border: 1px solid #facc15;
+            box-shadow: 0 0 20px rgba(250, 204, 21, 0.15);
+        }
+
+        /* QUESTION */
+        .faq-question {
+            padding: 18px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .faq-question i {
+            transition: 0.3s;
+        }
+
+        /* ROTATE ICON */
+        .faq-item.active .faq-question i {
+            transform: rotate(45deg);
+        }
+
+        /* ANSWER */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            color: #cbd5f5;
+            line-height: 1.6;
+            transition: all 0.4s ease;
+        }
+
+        /* OPEN STATE */
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 15px 20px 20px;
+        }
+
+
+
+        .simple-footer {
+            text-align: center;
+            padding: 30px 15px 90px 15px;
+            /* background: #020617; */
+            background: linear-gradient(135deg, #020617, #0f172a);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .simple-footer p {
+            margin: 5px 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .simple-footer .tagline {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* PROOF GRID */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        /* CARD */
+        .proof-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .proof-card:hover {
+            transform: translateY(-8px) scale(1.03);
+        }
+
+        /* IMAGE */
+        .proof-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* TEXT */
+        .proof-card p {
+            font-size: 14px;
+            color: #cbd5f5;
+        }
+
+
+
+        /* MASTER BOX */
+        .master-box {
+            display: flex;
+            gap: 30px;
+            padding: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* IMAGE */
+        .master-left img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 12px;
+        }
+
+        /* RIGHT */
+        .master-right {
+            flex: 1;
+        }
+
+        /* CHECK GRID */
+        .check-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            font-size: 14px;
+        }
+
+        .check-grid label {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* CTA */
+        .master-cta {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* PROBLEM GRID */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .problem-card {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        /* TESTIMONIAL */
+        .testimonial-box {
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* BONUS */
+        .bonus-box {
+            border: 2px solid #facc15;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .bonus-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        /* MOBILE */
+        @media(max-width:768px) {
+
+            .check-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .problem-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .bonus-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .master-full-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px 0px 40px;
+        }
+
+
+        /* WRAPPER */
+        .founder-wrapper {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT */
+        .founder-left {
+            position: relative;
+        }
+
+        .founder-left img {
+            width: 320px;
+            border-radius: 15px;
+            display: block;
+        }
+
+        /* BADGE */
+        .badge-earn {
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+            background: #f97316;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* RIGHT */
+        .founder-right {
+            flex: 1;
+            color: #000;
+        }
+
+        /* TITLE */
+        .founder-right h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        /* PARAGRAPH */
+        .founder-right p {
+            color: #444;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        /* STATS */
+        .founder-stats {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-box {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 12px;
+            flex: 1;
+            text-align: center;
+        }
+
+        .stat-box h4 {
+            color: #f97316;
+            font-size: 20px;
+        }
+
+        .stat-box span {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* NOTE */
+        .note {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* TESTIMONIAL */
+        .founder-testimonial {
+            margin-top: 20px;
+            padding: 20px;
+            background: #fff7ed;
+            border-left: 5px solid #f97316;
+            border-radius: 12px;
+        }
+
+        .founder-testimonial h4 {
+            margin-bottom: 5px;
+        }
+
+        .stars {
+            color: #facc15;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .quote {
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+
+            .founder-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .founder-left img {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .founder-stats {
+                flex-direction: column;
+            }
+        }
+
+
+        /* HEADING */
+        .mentor-heading {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* CARD */
+        .mentor-card {
+            display: flex;
+            gap: 25px;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 18px;
+            margin-bottom: 25px;
+            align-items: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* IMAGE */
+        .mentor-card img {
+            width: 320px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* CONTENT */
+        .mentor-content {
+            flex: 1;
+        }
+
+        .mentor-content h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .mentor-content h4 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .mentor-content p {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+
+            .mentor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .mentor-card img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+        /* HEADING */
+        .hope-heading {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* WRAPPER */
+        .hope-wrapper {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* CARD */
+        .hope-card {
+            flex: 1;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* IMAGE */
+        .hope-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* TITLES */
+        .danger {
+            color: #ef4444;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: #22c55e;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* LIST */
+        .hope-list {
+            list-style: none;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .hope-list li {
+            margin-bottom: 10px;
+            padding-left: 22px;
+            position: relative;
+            color: #333;
+        }
+
+        /* CROSS ICON */
+        .cross li::before {
+            content: "✖";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+
+        /* TICK ICON */
+        .tick li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+        }
+
+        /* TESTIMONIAL */
+        .mini-testimonial {
+            margin-top: 20px;
+            background: #fff7ed;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #f97316;
+        }
+
+        .mini-testimonial h4 {
+            margin-bottom: 5px;
+        }
+
+        .stars {
+            color: #facc15;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .hope-wrapper {
+                flex-direction: column;
+            }
+        }
+
+
+        /* HEADING */
+        .hope-heading {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        /* WRAPPER */
+        .hope-wrapper {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* CARD */
+        .hope-card {
+            flex: 1;
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 18px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* IMAGE */
+        .hope-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        /* TITLES */
+        .danger {
+            color: #ef4444;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: #22c55e;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* LIST */
+        .hope-list {
+            list-style: none;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        .hope-list li {
+            margin-bottom: 10px;
+            padding-left: 22px;
+            position: relative;
+            color: #333;
+        }
+
+        /* CROSS ICON */
+        .cross li::before {
+            content: "✖";
+            position: absolute;
+            left: 0;
+            color: #ef4444;
+        }
+
+        /* TICK ICON */
+        .tick li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #22c55e;
+        }
+
+        /* TESTIMONIAL */
+        .mini-testimonial {
+            margin-top: 20px;
+            background: #fff7ed;
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 4px solid #f97316;
+        }
+
+        .mini-testimonial h4 {
+            margin-bottom: 5px;
+        }
+
+        .stars {
+            color: #facc15;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            .hope-wrapper {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="hero container">
+        <div class="badge">Only for Experinaced IDP Affiliate Marketers -(not for newbies & looking for income peoples)
+        </div>
+
+        <h1>
+            Generate<span class="highlight"> 50–100 High Quality Leads & Hit ₹1L/Month</span><br>
+            Affiliate Commission — 1000+ REAL IDP RESULTS Using 85% Automated AI Lead Ads Framework. No DMs. No Viral
+            Reels. No Lead Buying.
+        </h1>
+
+        <p class="sub">
+            Join the Free 2-Hour AI Lead-to-Buyer Masterclass That Solves Your Junk Leads & No Sales problem & helps you
+            in building 85% automated funnel means six figure affiliate dashboard in part time efforts
+        </p>
+
+        <div class="flex">
+            <div class="video glass">
+
+                <iframe style="width:100%;height:500px;"
+                    src="https://www.youtube.com/embed/gDZZwwBUs8g?si=qtB58j03a_kiwrNV" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+        </div>
+
+        <div class="flex" style="justify-content: center; align-items: center;">
+            <h2>Total Value: ₹999</h2>
+        </div>
+
+        <div class="flex" style="justify-content: center; align-items: center; margin-top: 20px !important;">
+            <button class="cta-btn">WhatsApp पर बात करें <br>
+                <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span>
+            </button>
+            <!-- <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span> -->
+        </div>
+
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="section container">
+        <h2 class="hero-heading">Real Stories Real Transformations....</h2>
+
+        <div class="grid">
+            <div class="glass">
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/_zMbWXRpJmY?si=gSpPjxBfrcSvmLfe" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="glass">
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/sNATHrbhGxo?si=mtAtGWww86bIKUY6" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+            <div class="glass">
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/eY36SDaFcqo?si=aq6kQcXF28ea2Orq" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="glass">
+                <iframe style="width:100%;height:300px;"
+                    src="https://www.youtube.com/embed/dGdnmTJ2FGs?si=b_-MQhmIRqjISKzn" title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROOF SECTION -->
+    <div class="section container">
+        <h2 class="hero-heading">Real LIVE Transformations....🔥</h2>
+        <p class="hero-sub">1000+ Students Getting Real Results</p>
+
+        <div class="proof-grid">
+
+            <!-- ITEM -->
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Made ₹21,000 in 2 Days 🔥</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>5+ High Quality Leads 💰</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Payment Received ₹18,862 ✅</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>₹20,000 Commission 🎯</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Payment Successful 🚀</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>High Ticket Sale Closed 💼</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Another Payout ₹21,000 💸</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Consistent Income 📈</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Earning Dashboard Proof 📊</p>
+            </div>
+
+            <div class="proof-card">
+                <img src="https://storage.files-vault.com/landing_pages/96053/cd875edb9772c4d81580cf4bae29f28e-cd875edb9772c4d81580cf4bae29f28e-5_lutan_980.webp"
+                    alt="">
+                <p>Earning Dashboard Proof 📊</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- AI MASTERCLASS SECTION -->
+    <div class="section container">
+
+        <h2 class="hero-heading">In This Free 3-Hour AI Masterclass, You'll Discover:</h2>
+
+        <!-- LEFT IMAGE -->
+        <div class="master-full-image">
+            <img src="https://storage.files-vault.com/landing_pages/96053/76d8166568bbb265dcd5e25e50920a44-76d8166568bbb265dcd5e25e50920a44-WhatsApp-Image-2025-11-27-at-1.06.28-AM.webp"
+                alt="Masterclass">
+        </div>
+
+        <!-- TOP BOX -->
+        <div class="master-box glass">
+
+
+
+            <!-- RIGHT CONTENT -->
+            <div class="master-right">
+
+                <div class="check-grid">
+
+                    <label><input type="checkbox"> Only getting ₹2k–10k but busy reverse pitch calls</label>
+                    <label><input type="checkbox"> Wishing automation didn’t need paid calls</label>
+                    <label><input type="checkbox"> Managing household + business time is impossible</label>
+                    <label><input type="checkbox"> People don’t trust your content</label>
+                    <label><input type="checkbox"> Part-time business became full-time stress</label>
+                    <label><input type="checkbox"> Leads don’t convert, cold leads get ignored</label>
+                    <label><input type="checkbox"> Mentor stopped supporting after you paid</label>
+                    <label><input type="checkbox"> Dashboard shows ₹0 while others post ₹50k–₹1L</label>
+                    <label><input type="checkbox"> Company trips feel next to impossible</label>
+                    <label><input type="checkbox"> Running ads but only getting junk leads</label>
+                    <label><input type="checkbox"> Leads never respond</label>
+                    <label><input type="checkbox"> You feel stuck in low quality leads loop</label>
+
+                </div>
+
+                <div class="master-cta">
+                    <p><b>If You Checked 3+ Boxes, This Free AI Masterclass Will Change Everything</b></p>
+                    <button class="cta-btn">Yes! I Want Leads Solution 🚀</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEMS SECTION -->
+    <div class="section container">
+        <h2 class="hero-heading">IDP Affiliates: Check How Many of These You're Facing Right Now...</h2>
+
+        <div class="problem-grid">
+
+            <div class="problem-card">
+                <h4>AI Quality Lead Data Secret</h4>
+                <p>Skyrocket conversion with proven frameworks</p>
+            </div>
+
+            <div class="problem-card">
+                <h4>High-Converting Marketing Message</h4>
+                <p>Stop attracting “no money” people</p>
+            </div>
+
+            <div class="problem-card">
+                <h4>Lead-to-Buyer Funnel</h4>
+                <p>Automate 85% of your work</p>
+            </div>
+
+            <div class="problem-card">
+                <h4>100+ Lead Flow System</h4>
+                <p>Generate daily leads using AI ads</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- TESTIMONIAL -->
+    <div class="section container">
+        <div class="glass testimonial-box" style="text-align: left;">
+            <p>⭐⭐⭐⭐⭐</p>
+            <p>
+
+                “At first I struggled… then I got results. Now I consistently make sales with high-quality leads.”
+            </p>
+            <b>- Asma K.</b>
+        </div>
+    </div>
+
+
+    <!-- BONUS SECTION -->
+    <div class="section container">
+
+        <div class="bonus-box">
+            <h2>Plus Get ₹25,000 Worth of Bonuses:</h2>
+
+            <div class="bonus-grid">
+
+                <div class="bonus-item">
+                    <h4>🔥 DM Scripts</h4>
+                    <p>Close deals faster</p>
+                </div>
+
+                <div class="bonus-item">
+                    <h4>📈 Ad Creative Templates</h4>
+                    <p>High converting ads</p>
+                </div>
+
+                <div class="bonus-item">
+                    <h4>💰 Winning Ad Videos</h4>
+                    <p>Copy proven content</p>
+                </div>
+
+                <div class="bonus-item">
+                    <h4>⚙️ AI Funnel Setup</h4>
+                    <p>Done-for-you system</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FINAL CTA -->
+    <div class="section container" style="text-align:center;">
+        <p>Join 1000+ Professionals Transforming Their Income</p>
+        <button class="cta-btn">Yes! Show Me The AI Lead System 🔥</button>
+    </div>
+
+
+
+    <!-- COURSES -->
+    <div class="section container">
+        <h2 class="hero-heading">Popular Courses</h2>
+        <p class="hero-sub">ऐसे courses जो आपके career को मजबूत बनाते हैं — expert guidance के साथ</p>
+
+        <div class="grid">
+            <div class="course-card">
+                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-15_15-25-40/dece%20(2).png"
+                    class="course-img">
+                <div class="course-content">
+                    <h3>IGNOU DECE Course</h3>
+                    <p>Live classes + notes + test series</p>
+                    <div class="course-meta">
+                        <span class="price">₹950</span>
+                        <span class="old-price">₹2,999</span>
+                    </div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-15_15-28-38/clis.png"
+                    class="course-img">
+                <div class="course-content">
+                    <h3>CLIS</h3>
+                    <p>Crash course + PYQs</p>
+                    <div class="course-meta">
+                        <span class="price">₹1150</span>
+                        <span class="old-price">₹2,999</span>
+                    </div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <img src="https://delsopencontent.blob.core.windows.net/delsopencontent/eccb0ad8fdce4017a5bccbea80852c4c/2026-04-11_17-24-51/mcq.png"
+                    class="course-img">
+                <div class="course-content">
+                    <h3>CLIS (MCQ BATCH)</h3>
+                    <p>Crash course + PYQs</p>
+                    <div class="course-meta">
+                        <span class="price">₹4,999</span>
+                        <span class="old-price">₹8,999</span>
+                    </div>
+                    <button class="btn">Enroll Now</button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- FOUNDER STORY SECTION -->
+    <div class="section container founder-section">
+
+        <h2 class="hero-heading">
+            Meet The Man Who Went From Zero To ₹1 Cr+ Using This Exact System
+        </h2>
+
+        <div class="founder-wrapper">
+
+            <!-- LEFT IMAGE -->
+            <div class="founder-left">
+                <img src="https://storage.files-vault.com/landing_pages/96053/f603291d79ff72231ad42ca9f1705e9e-f603291d79ff72231ad42ca9f1705e9e-WhatsApp-Image-2026-03-02-at-3.52.18-PM.webp"
+                    alt="Afrid Chippa">
+                <div class="badge-earn">₹1 Cr+ Earned</div>
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="founder-right">
+
+                <h3>Meet Mr. Afrid Chippa</h3>
+
+                <p>
+                    Md. Aafrid, and I know exactly how you feel because I was once where you are now.
+                </p>
+
+                <p>
+                    Three years ago, I was buying expensive leads that never converted, getting my WhatsApp banned
+                    repeatedly, and facing constant family pressure about my "internet business" that wasn't making
+                    money.
+                </p>
+
+                <p>
+                    Today, I've built a ₹1 Cr+ online business empire using the exact AI Lead Ads Framework I'll be
+                    sharing with you, and more importantly, I've helped 650+ people just like you transform their
+                    struggles into success.
+                </p>
+
+                <!-- STATS -->
+                <div class="founder-stats">
+
+                    <div class="stat-box">
+                        <h4>15 lakhs</h4>
+                        <span>Monthly revenue</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <h4>1000+</h4>
+                        <span>Success Stories</span>
+                    </div>
+
+                </div>
+
+                <p class="note">
+                    My methods have been featured in 100+ newspapers across India, but what makes me most proud are
+                    stories like these:
+                </p>
+
+                <!-- TESTIMONIAL -->
+                <div class="founder-testimonial">
+                    <h4>Sazia A.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p class="role">Doctor & Housewife • Made ₹8 Lakhs</p>
+
+                    <p class="quote">
+                        "I was struggling to balance my medical practice with IDP business. Aafrid's AI system
+                        completely changed everything—I now work just 2 hours daily and make more than my medical
+                        practice!"
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MENTOR / CELEBRITY SECTION -->
+    <div class="section container mentor-section">
+
+        <h2 class="mentor-heading">With Our Mentors and Celebrity</h2>
+
+        <!-- CARD 1 -->
+        <div class="mentor-card">
+            <img src="https://storage.files-vault.com/landing_pages/96053/35b21fb710c8c45bf48cd7932a7687a2-35b21fb710c8c45bf48cd7932a7687a2-AafridwithSB_c4fgo_1080.webp"
+                alt="Saurabh Bhatnagar">
+
+            <div class="mentor-content">
+                <h3>Saurabh Bhatnagar</h3>
+                <h4>CEO of Flexi Funnels</h4>
+                <p>
+                    he is the founder of Flexi funnels - India's First or Best Funnel builder & he is the world’s finest
+                    online business growth strategist
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="mentor-card">
+            <img src="https://storage.files-vault.com/landing_pages/96053/35b21fb710c8c45bf48cd7932a7687a2-35b21fb710c8c45bf48cd7932a7687a2-AafridwithSB_c4fgo_1080.webp"
+                alt="Rahul Bhatnagar">
+
+            <div class="mentor-content">
+                <h3>Rahul bhatnagar</h3>
+                <h4>Entrepreneur, Motivational Speaker With 1.3 Million Followers</h4>
+                <p>
+                    Rahul Bhatnagar is a Professional Speaker & a dedicated Mentor. He helps individuals become
+                    impeccable communicators. He mentors businesses to grow their presence & run their work on an
+                    automated basis
+                </p>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="mentor-card">
+            <img src="https://storage.files-vault.com/landing_pages/96053/35b21fb710c8c45bf48cd7932a7687a2-35b21fb710c8c45bf48cd7932a7687a2-AafridwithSB_c4fgo_1080.webp"
+                alt="Munmun Dutta">
+
+            <div class="mentor-content">
+                <h3>Munmun Dutta Aka Babita ji</h3>
+                <h4>Indian Actress</h4>
+                <p>
+                    Munmun Dutta, who plays the character of Babita ji in Taarak Mehta Ka Ooltah Chashmah, is an Indian
+                    actress. She was associated with this show in the year 2008
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- LAST HOPE SECTION -->
+    <div class="section container last-hope-section">
+
+        <h2 class="hope-heading">This Masterclass Is Your LAST HOPE If:</h2>
+
+        <div class="hope-wrapper">
+
+            <!-- LEFT CARD (PROBLEMS) -->
+            <div class="hope-card">
+
+                <img src="assets/problem.jpg" alt="Problems" class="hope-img">
+
+                <h3 class="danger">Before using AI Lead Framework</h3>
+
+                <ul class="hope-list cross">
+                    <li>You're buying "premium leads" but 80% don't pick calls</li>
+                    <li>Your WhatsApp gets banned frequently</li>
+                    <li>Leads ghost you or give only objections</li>
+                    <li>Working 12+ hours but making only 1-2 sales</li>
+                    <li>Family thinks it's a waste of time</li>
+                </ul>
+
+                <!-- TESTIMONIAL -->
+                <div class="mini-testimonial">
+                    <h4>Satya R.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p class="role">Housewife • Made ₹6 Lakhs</p>
+                    <p>
+                        "I had all these problems before joining. Now I'm the primary earner in my household!"
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT CARD (SOLUTIONS) -->
+            <div class="hope-card">
+
+                <img src="assets/solution.jpg" alt="Solutions" class="hope-img">
+
+                <h3 class="success">READY FOR THESE SOLUTIONS?</h3>
+
+                <ul class="hope-list tick">
+                    <li>Get buyer-intent high quality leads</li>
+                    <li>Follow proven step-by-step framework</li>
+                    <li>Build 85% automated business</li>
+                    <li>Turn family pressure into pride</li>
+                    <li>Learn from ₹8Cr+ results mentor</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LAST HOPE SECTION -->
+    <div class="section container last-hope-section">
+
+        <h2 class="hope-heading">This Masterclass Is Your LAST HOPE If:</h2>
+
+        <div class="hope-wrapper">
+
+            <!-- LEFT CARD (PROBLEMS) -->
+            <div class="hope-card">
+
+                <img src="https://storage.files-vault.com/landing_pages/96053/40b2c8c3e41b361829f6814d52c526ef-40b2c8c3e41b361829f6814d52c526ef-strugglingfacewomen_u8l7w_3247.webp" alt="Problems" class="hope-img">
+
+                <h3 class="danger">Before using AI Lead Framework</h3>
+
+                <ul class="hope-list cross">
+                    <li>You're buying "premium leads" but 80% don't pick calls</li>
+                    <li>Your WhatsApp gets banned frequently</li>
+                    <li>Leads ghost you or give only objections</li>
+                    <li>Working 12+ hours but making only 1-2 sales</li>
+                    <li>Family thinks it's a waste of time</li>
+                </ul>
+
+                <!-- TESTIMONIAL -->
+                <div class="mini-testimonial">
+                    <h4>Satya R.</h4>
+                    <div class="stars">★★★★★</div>
+                    <p class="role">Housewife • Made ₹6 Lakhs</p>
+                    <p>
+                        "I had all these problems before joining. Now I'm the primary earner in my household!"
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- RIGHT CARD (SOLUTIONS) -->
+            <div class="hope-card">
+
+                <img src="https://storage.files-vault.com/landing_pages/96053/a63a6e46e8ee6a452c39af1e4b8201d7-a63a6e46e8ee6a452c39af1e4b8201d7-HappyFaceman_681wv_3093.webp" alt="Solutions" class="hope-img">
+
+                <h3 class="success">READY FOR THESE SOLUTIONS?</h3>
+
+                <ul class="hope-list tick">
+                    <li>Get buyer-intent high quality leads</li>
+                    <li>Follow proven step-by-step framework</li>
+                    <li>Build 85% automated business</li>
+                    <li>Turn family pressure into pride</li>
+                    <li>Learn from ₹8Cr+ results mentor</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- COUNTDOWN -->
+    <!-- <div class="section">
+        <div class="countdown-box">
+            <div class="time"><span id="hours">07</span><small>hours</small></div>
+            <div class="time"><span id="minutes">25</span><small>minutes</small></div>
+            <div class="time"><span id="seconds">17</span><small>seconds</small></div>
+        </div>
+    </div> -->
+
+
+    <!-- Enquery form design -->
+    <!-- PREMIUM FORM SECTION -->
+    <div class="section container">
+
+        <div class="lead-wrapper glass">
+
+            <!-- LEFT CONTENT -->
+            <div class="lead-content">
+                <h2>अब देर मत कीजिए — <span class="highlight">अपने career की शुरुआत आज ही करें</span> 🚀</h2>
+                <p>
+                    Admission लेना हो या Assignment में help चाहिए — हमारी team हर step पर आपके साथ है।
+                </p>
+
+                <ul class="lead-points">
+                    <li>✅ Live + Recorded Classes</li>
+                    <li>✅ Assignment Guidance</li>
+                    <li>✅ परीक्षा Strategy + PYQs</li>
+                </ul>
+            </div>
+
+            <!-- RIGHT FORM -->
+            <div class="lead-form">
+                <form>
+
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Full Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="tel" required>
+                        <label>Mobile Number</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label>Email Address</label>
+                    </div>
+
+                    <div class="input-group">
+                        <select required>
+                            <option value=""></option>
+                            <option>IGNOU CLIS</option>
+                            <option>DECE</option>
+                            <option>MCQ Batch</option>
+                        </select>
+                        <label>Select Course</label>
+                    </div>
+
+                    <button class="cta-btn">
+                        Book Seat Now 🔥
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2 class="faq-heading">Frequently Asked Questions ❓</h2>
+        <p class="faq-sub">Clear your doubts before you join</p>
+
+        <div class="faq-container">
+
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>क्या आप IGNOU में admission करवाते हैं?</span>
+                    <i>+</i>
+                </div>
+                <div class="faq-answer">
+                    हाँ, हम complete admission support देते हैं।
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Assignment में help मिलती है?</span>
+                    <i>+</i>
+                </div>
+                <div class="faq-answer">
+                    हाँ, हम assignment बनाने और submit करने में पूरी सहायता करते हैं।
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>क्या study material मिलता है?</span>
+                    <i>+</i>
+                </div>
+                <div class="faq-answer">
+                    हाँ, आपको proper study guidance और material provide किया जाता है।
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- SIMPLE FOOTER -->
+    <footer class="simple-footer">
+        <p>© 2026 English Revolution</p>
+        <p class="tagline">Helping IGNOU students succeed without confusion 🚀</p>
+    </footer>
+
+    <!-- CTA -->
+    <div class="cta-bar">
+        <!-- <div>⏳ Limited Time</div>
+        <div class="timer"><span id="min">10</span>:<span id="sec">00</span></div> -->
+        <a href="#" class="btn">Enroll Now 999/-</a>
+    </div>
+
+    <script>
+        let totalSeconds = 7 * 3600 + 25 * 60 + 17;
+
+        function updateTimer() {
+            let h = Math.floor(totalSeconds / 3600);
+            let m = Math.floor((totalSeconds % 3600) / 60);
+            let s = totalSeconds % 60;
+
+            document.getElementById("hours").innerText = h;
+            document.getElementById("minutes").innerText = m;
+            document.getElementById("seconds").innerText = s;
+
+            if (totalSeconds > 0) totalSeconds--;
+        }
+
+        setInterval(updateTimer, 1000);
+    </script>
+
+    <script>
+        document.querySelectorAll(".faq-question").forEach(q => {
+            q.addEventListener("click", () => {
+                const item = q.parentElement;
+
+                // close all
+                document.querySelectorAll(".faq-item").forEach(i => {
+                    if (i !== item) i.classList.remove("active");
+                });
+
+                // toggle current
+                item.classList.toggle("active");
+            });
+        });
+    </script>
+
+</body>
+
+</html>
