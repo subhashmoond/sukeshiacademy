@@ -544,10 +544,10 @@
         <div class="flex">
             <div class="video glass">
 
-                <iframe style="width:100%;height:600px;" src="https://www.youtube.com/shorts/ZRXZwml-hf4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe style="width:100%;height:600px;"
+                    src="https://www.youtube.com/embed/ZRXZwml-hf4?autoplay=1&mute=1&playsinline=1"
+                    title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
 
             </div>
         </div>
@@ -675,49 +675,49 @@
     <!-- Enquery form design -->
     <!-- PREMIUM FORM SECTION -->
     <div class="section container">
-    <div class="lead-wrapper glass">
+        <div class="lead-wrapper glass">
 
-        <div class="lead-content">
-            <h2>अब देर मत कीजिए — <span class="highlight">अपने career की शुरुआत आज ही करें</span> 🚀</h2>
-            <p>Admission लेना ho ya Assignment में help चाहिए — हमारी team हर step पर आपके साथ है।</p>
-        </div>
+            <div class="lead-content">
+                <h2>अब देर मत कीजिए — <span class="highlight">अपने career की शुरुआत आज ही करें</span> 🚀</h2>
+                <p>Admission लेना ho ya Assignment में help चाहिए — हमारी team हर step पर आपके साथ है।</p>
+            </div>
 
-        <div class="lead-form">
-            <form id="leadForm">
+            <div class="lead-form">
+                <form id="leadForm">
 
-                <div class="input-group">
-                    <input type="text" name="name" required>
-                    <label>Full Name</label>
-                </div>
+                    <div class="input-group">
+                        <input type="text" name="name" required>
+                        <label>Full Name</label>
+                    </div>
 
-                <div class="input-group">
-                    <input type="tel" name="phone" required>
-                    <label>Mobile Number</label>
-                </div>
+                    <div class="input-group">
+                        <input type="tel" name="phone" required>
+                        <label>Mobile Number</label>
+                    </div>
 
-                <div class="input-group">
-                    <input type="email" name="email" required>
-                    <label>Email Address</label>
-                </div>
+                    <div class="input-group">
+                        <input type="email" name="email" required>
+                        <label>Email Address</label>
+                    </div>
 
-                <div class="input-group">
-                    <select name="course" required>
-                        <option value=""></option>
-                        <option>IGNOU CLIS</option>
-                        <option>DECE</option>
-                        <option>MCQ Batch</option>
-                    </select>
-                    <label>Select Course</label>
-                </div>
+                    <div class="input-group">
+                        <select name="course" required>
+                            <option value=""></option>
+                            <option>IGNOU CLIS</option>
+                            <option>DECE</option>
+                            <option>MCQ Batch</option>
+                        </select>
+                        <label>Select Course</label>
+                    </div>
 
-                <button type="submit" class="cta-btn">
-                    Book Seat Now 🔥
-                </button>
+                    <button type="submit" class="cta-btn">
+                        Book Seat Now 🔥
+                    </button>
 
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- FAQ -->
     <section class="faq-section">
@@ -818,65 +818,65 @@
             window.open(url, '_blank');
         }
     </script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-document.getElementById("leadForm").addEventListener("submit", async function(e) {
-    e.preventDefault();
+    <script>
+        document.getElementById("leadForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-    const form = e.target;
+            const form = e.target;
 
-    const payload = {
-        name: form.name.value,
-        email: form.email.value,
-        subject: "General enquiry",
-        message: form.course.value,
-        phone_number: form.phone.value
-    };
+            const payload = {
+                name: form.name.value,
+                email: form.email.value,
+                subject: "General enquiry",
+                message: form.course.value,
+                phone_number: form.phone.value
+            };
 
-    try {
-        const response = await fetch("https://sukeshiacademy.dels.live/api/learner/enquiry/create/", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(payload)
+            try {
+                const response = await fetch("https://sukeshiacademy.dels.live/api/learner/enquiry/create/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Seat Booked 🎉',
+                        text: 'Our team will contact you shortly.',
+                        confirmButtonColor: '#28a745'
+                    });
+
+                    form.reset();
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Something went wrong!'
+                    });
+                }
+
+            } catch (error) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Network Error',
+                    text: 'Please try again.'
+                });
+            }
         });
+    </script>
 
-        if (response.ok) {
-            Swal.fire({
-                icon: 'success',
-                title: 'Seat Booked 🎉',
-                text: 'Our team will contact you shortly.',
-                confirmButtonColor: '#28a745'
-            });
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            form.reset();
-        } else {
-            Swal.fire({
-                icon: 'error',
-                title: 'Error',
-                text: 'Something went wrong!'
-            });
-        }
-
-    } catch (error) {
-        Swal.fire({
-            icon: 'warning',
-            title: 'Network Error',
-            text: 'Please try again.'
-        });
-    }
-});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-Swal.fire({
+    Swal.fire({
     icon: 'success',
     title: 'Seat Booked 🎉',
     text: 'Our team will contact you shortly.'
-});
+    });
 
 
 </body>
