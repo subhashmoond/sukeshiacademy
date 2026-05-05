@@ -41,11 +41,13 @@
         }
 
         .badge {
-            background: rgba(255, 255, 255, 0.1);
+            background: #facc15;
             padding: 6px 15px;
             border-radius: 20px;
             display: inline-block;
             margin-bottom: 15px;
+            color: #000;
+            font-weight: 600;
         }
 
         h1 {
@@ -506,6 +508,21 @@
             font-size: 13px;
             color: #64748b;
         }
+
+        .btn-animation {
+            display: inline-block;
+            animation: scalePulse 1.2s ease-in-out infinite;
+        }
+
+        @keyframes scalePulse {
+            0% {
+                transform: scale(0.7);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
@@ -513,10 +530,10 @@
 
     <!-- HERO -->
     <div class="hero container">
-        <div class="badge">Pre-Primary Teacher या Librarian Grade 3 में Career बनाना चाहते हैं?</div>
+        <div class="badge">IGNOU Programs में Career बनाना चाहते हैं ?</div>
 
         <h1>
-            IGNOU<span class="highlight"> CLIS & DECE Program</span><br>
+            IGNOU<span class="highlight"> All Program</span><br>
             के साथ अपने future को दें सही दिशा — बिना किसी confusion के
         </h1>
 
@@ -527,22 +544,21 @@
         <div class="flex">
             <div class="video glass">
 
-                <iframe style="width:100%;height:500px;"
-                    src="https://www.youtube.com/embed/gDZZwwBUs8g?si=qtB58j03a_kiwrNV" title="YouTube video player"
-                    frameborder="0"
+                <iframe style="width:100%;height:600px;" src="https://www.youtube.com/shorts/ZRXZwml-hf4"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
         </div>
 
-        <div class="flex" style="justify-content: center; align-items: center;">
+        <!-- <div class="flex" style="justify-content: center; align-items: center;">
             <h2>Total Value: ₹999</h2>
-        </div>
+        </div> -->
 
         <div class="flex" style="justify-content: center; align-items: center; margin-top: 20px !important;">
-            <button class="cta-btn">WhatsApp पर बात करें <br>
-                <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span>
+            <button class="cta-btn" onclick="openWhatsApp()">WhatsApp पर बात करें <br>
+                <span style=" font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span>
             </button>
             <!-- <span style="font-size: 0.65em; font-weight: 600; opacity: 0.9;">SECURE MY Seat FOR FREE</span> -->
         </div>
@@ -555,32 +571,28 @@
 
         <div class="grid">
             <div class="glass">
-                <iframe style="width:100%;height:300px;"
-                    src="https://www.youtube.com/embed/_zMbWXRpJmY?si=gSpPjxBfrcSvmLfe" title="YouTube video player"
-                    frameborder="0"
+                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/shorts/aMGAF14cppQ"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div class="glass">
-                <iframe style="width:100%;height:300px;"
-                    src="https://www.youtube.com/embed/sNATHrbhGxo?si=mtAtGWww86bIKUY6" title="YouTube video player"
-                    frameborder="0"
+                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/shorts/-U7RbEU3U1o"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             </div>
             <div class="glass">
-                <iframe style="width:100%;height:300px;"
-                    src="https://www.youtube.com/embed/eY36SDaFcqo?si=aq6kQcXF28ea2Orq" title="YouTube video player"
-                    frameborder="0"
+                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/shorts/EWp0i84DTXA"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
 
             <div class="glass">
-                <iframe style="width:100%;height:300px;"
-                    src="https://www.youtube.com/embed/dGdnmTJ2FGs?si=b_-MQhmIRqjISKzn" title="YouTube video player"
-                    frameborder="0"
+                <iframe style="width:100%;height:300px;" src="https://www.youtube.com/shorts/aMGAF14cppQ"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
@@ -600,10 +612,13 @@
                     <h3>IGNOU DECE Course</h3>
                     <p>Live classes + notes + test series</p>
                     <div class="course-meta">
-                        <span class="price">₹950</span>
-                        <span class="old-price">₹2,999</span>
+                        <span class="price">₹1550</span>
+                        <span class="old-price">₹4,999</span>
                     </div>
-                    <button class="btn">Enroll Now</button>
+                    <a href="https://sukeshiacademy.dels.live/home/course-detail/dc001798345c46948a6b89751065394a"
+                        target="_blank" class="btn">
+                        Enroll Now
+                    </a>
                 </div>
             </div>
 
@@ -615,9 +630,13 @@
                     <p>Crash course + PYQs</p>
                     <div class="course-meta">
                         <span class="price">₹1150</span>
-                        <span class="old-price">₹2,999</span>
+                        <span class="old-price">₹3,999</span>
                     </div>
-                    <button class="btn">Enroll Now</button>
+                    <!-- <button class="btn">Enroll Now</button> -->
+                    <a href="https://sukeshiacademy.dels.live/home/course-detail/70f3bf110840411e9f153ecc34f9f905"
+                        target="_blank" class="btn">
+                        Enroll Now
+                    </a>
                 </div>
             </div>
 
@@ -628,10 +647,14 @@
                     <h3>CLIS (MCQ BATCH)</h3>
                     <p>Crash course + PYQs</p>
                     <div class="course-meta">
-                        <span class="price">₹4,999</span>
-                        <span class="old-price">₹8,999</span>
+                        <span class="price">₹699</span>
+                        <span class="old-price">₹2,999</span>
                     </div>
-                    <button class="btn">Enroll Now</button>
+                    <!-- <button class="btn">Enroll Now</button> -->
+                    <a href="https://sukeshiacademy.dels.live/home/course-detail/9bbc5fee3c014af2b83729b406c72f6a"
+                        target="_blank" class="btn">
+                        Enroll Now
+                    </a>
                 </div>
             </div>
 
@@ -652,62 +675,49 @@
     <!-- Enquery form design -->
     <!-- PREMIUM FORM SECTION -->
     <div class="section container">
+    <div class="lead-wrapper glass">
 
-        <div class="lead-wrapper glass">
-
-            <!-- LEFT CONTENT -->
-            <div class="lead-content">
-                <h2>अब देर मत कीजिए — <span class="highlight">अपने career की शुरुआत आज ही करें</span> 🚀</h2>
-                <p>
-                    Admission लेना हो या Assignment में help चाहिए — हमारी team हर step पर आपके साथ है।
-                </p>
-
-                <ul class="lead-points">
-                    <li>✅ Live + Recorded Classes</li>
-                    <li>✅ Assignment Guidance</li>
-                    <li>✅ परीक्षा Strategy + PYQs</li>
-                </ul>
-            </div>
-
-            <!-- RIGHT FORM -->
-            <div class="lead-form">
-                <form>
-
-                    <div class="input-group">
-                        <input type="text" required>
-                        <label>Full Name</label>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="tel" required>
-                        <label>Mobile Number</label>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="email" required>
-                        <label>Email Address</label>
-                    </div>
-
-                    <div class="input-group">
-                        <select required>
-                            <option value=""></option>
-                            <option>IGNOU CLIS</option>
-                            <option>DECE</option>
-                            <option>MCQ Batch</option>
-                        </select>
-                        <label>Select Course</label>
-                    </div>
-
-                    <button class="cta-btn">
-                        Book Seat Now 🔥
-                    </button>
-
-                </form>
-            </div>
-
+        <div class="lead-content">
+            <h2>अब देर मत कीजिए — <span class="highlight">अपने career की शुरुआत आज ही करें</span> 🚀</h2>
+            <p>Admission लेना ho ya Assignment में help चाहिए — हमारी team हर step पर आपके साथ है।</p>
         </div>
 
+        <div class="lead-form">
+            <form id="leadForm">
+
+                <div class="input-group">
+                    <input type="text" name="name" required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" name="phone" required>
+                    <label>Mobile Number</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="input-group">
+                    <select name="course" required>
+                        <option value=""></option>
+                        <option>IGNOU CLIS</option>
+                        <option>DECE</option>
+                        <option>MCQ Batch</option>
+                    </select>
+                    <label>Select Course</label>
+                </div>
+
+                <button type="submit" class="cta-btn">
+                    Book Seat Now 🔥
+                </button>
+
+            </form>
+        </div>
     </div>
+</div>
 
     <!-- FAQ -->
     <section class="faq-section">
@@ -761,7 +771,7 @@
     <div class="cta-bar">
         <!-- <div>⏳ Limited Time</div>
         <div class="timer"><span id="min">10</span>:<span id="sec">00</span></div> -->
-        <a href="#" class="btn">Enroll Now 999/-</a>
+        <a href="#" class="btn btn-animation" onclick="openWhatsApp()"> WhatsApp पर बात करें </a>
     </div>
 
     <script>
@@ -797,6 +807,77 @@
             });
         });
     </script>
+
+    <script>
+        function openWhatsApp() {
+            const phoneNumber = "919784311909"; // country code + number (no +)
+            const message = "Hello, I want to secure my seat.";
+
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+            window.open(url, '_blank');
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.getElementById("leadForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const payload = {
+        name: form.name.value,
+        email: form.email.value,
+        subject: "General enquiry",
+        message: form.course.value,
+        phone_number: form.phone.value
+    };
+
+    try {
+        const response = await fetch("https://sukeshiacademy.dels.live/api/learner/enquiry/create/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Seat Booked 🎉',
+                text: 'Our team will contact you shortly.',
+                confirmButtonColor: '#28a745'
+            });
+
+            form.reset();
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Something went wrong!'
+            });
+        }
+
+    } catch (error) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Network Error',
+            text: 'Please try again.'
+        });
+    }
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+Swal.fire({
+    icon: 'success',
+    title: 'Seat Booked 🎉',
+    text: 'Our team will contact you shortly.'
+});
+
 
 </body>
 
